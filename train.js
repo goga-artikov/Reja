@@ -80,3 +80,30 @@
 //     console.log(javob)  
 // }
 // run();
+
+// TASK 
+
+// function countLetter(letter, word) {
+//   let count = 0;
+
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+// console.log(countLetter("a", "banana"));
+
+// function hisoblaHarflarni(harf, söz) {
+//     let hisobla = 0;
+
+//     for (let i = 0; i <söz.length; i++) {
+//         if(söz[i] === harf) {
+//             hisobla++
+//         }
+//     }
+//     return hisobla;
+// }
+// console.log(countLetter("r", "engineer"));
