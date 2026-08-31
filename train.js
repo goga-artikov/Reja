@@ -107,3 +107,34 @@
 //     return hisobla;
 // }
 // console.log(countLetter("r", "engineer"));
+
+
+// // TASK 
+
+// function countStr(str) {
+//   let count = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] >= "0" && str[i] <= "9") {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// console.log(countStr("ad2o5479j9h888j9"));
+
+// function countStr(str) {
+//   let count = 0;
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i]) && str[i] !== " ") {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// console.log(countStr("ad2o5479j79h888j9"));
