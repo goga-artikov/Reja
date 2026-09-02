@@ -64,24 +64,23 @@
 // });
 // console.log("passed here 1")
 
-
 // async/await
-// async function run() { 
+// async function run() {
 //     let javob = await maslahatBering(65);
 //     console.log(javob);
 // }
 // run();
-// async function run() { 
+// async function run() {
 //     let javob = await maslahatBering(65);
 //     console.log(javob);
 //     javob = await maslahatBering(31);
 //     console.log(javob)
 //     javob = await maslahatBering(41);
-//     console.log(javob)  
+//     console.log(javob)
 // }
 // run();
 
-// TASK 
+// TASK
 
 // function countLetter(letter, word) {
 //   let count = 0;
@@ -108,8 +107,7 @@
 // }
 // console.log(countLetter("r", "engineer"));
 
-
-// // TASK 
+// // TASK B
 
 // function countStr(str) {
 //   let count = 0;
@@ -138,3 +136,15 @@
 // }
 
 // console.log(countStr("ad2o5479j79h888j9"));
+
+// TASK-C
+
+function checkContent(string1, string2) {
+    const sorted1 = string1.split('').sort().join('');
+    const sorted2 = string2.split('').sort().join('');
+
+    return sorted1 === sorted2;
+}
+
+console.log(checkContent("mitgroup", "umtgripo")); //true
+console.log(checkContent("mashaqqat", "mit")); //false
