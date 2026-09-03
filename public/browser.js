@@ -11,7 +11,7 @@ function itemTemplate(item) {
       </div>
     </li>`;
 }
-
+console.log("**********")
 let createField = document.getElementById("create-field");
 
 document.getElementById("create-form").addEventListener("submit", function (e) {
