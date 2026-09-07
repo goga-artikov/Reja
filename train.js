@@ -140,11 +140,105 @@
 // TASK-C
 
 function checkContent(string1, string2) {
-    const sorted1 = string1.split('').sort().join('');
-    const sorted2 = string2.split('').sort().join('');
+  const sorted1 = string1.split("").sort().join("");
+  const sorted2 = string2.split("").sort().join("");
 
-    return sorted1 === sorted2;
+  return sorted1 === sorted2;
 }
 
 console.log(checkContent("mitgroup", "umtgripo")); //true
 console.log(checkContent("mashaqqat", "mit")); //false
+
+// D-TASK
+
+class Shop {
+  constructor(non, lagmon, kola) {
+    this.mahsulotlar = { non, lagmon, kola };
+  }
+
+  vaqt() {
+    const now = new Date();
+    return `${now.getHours()};${now.getMinutes()}`;
+  }
+
+  qoldiq() {
+    const { non, lagmon, kola } = this.mahsulotlar;
+    console.log(`[${this.vaqt()}]`);
+    return `hozir ${this.vaqt()}da ${non}ta non, ${lagmon}ta lagmon va ${kola}ta cola mavjud!`;
+  }
+
+  sotish(mahsulot, soni) {
+    console.log(`[${this.vaqt()}]${mahsulot} - ${soni}ta`);
+    this.mahsulotlar[mahsulot] -= soni;
+  }
+
+  qabul(mahsulot, soni) {
+    console.log(`[${this.vaqt()}] ${mahsulot} - ${soni}ta`);
+    this.mahsulotlar[mahsulot] += soni;
+  }
+}
+
+// tekshiramiz
+
+const shop = new Shop(4, 5, 2);
+console.log(shop.qoldiq());
+
+shop.sotish("non", 2);
+shop.sotish("lagmon", 3);
+shop.qabul("kola", 4);
+
+console.log(shop.qoldiq());
+
+// class Shop {
+//   #non;
+//   #lagmon;
+//   #cola;
+
+//   constructor(non, lagmon, cola) {
+//     this.#non = non;
+//     this.#lagmon = lagmon;
+//     this.#cola = cola;
+//   }
+
+//   #hozirVaqt() {
+//     const now = new Date();
+//     const soat = String(now.getHours()).padStart(2, "0");
+//     const daqiqa = String(now.getMinutes()).padStart(2, "0");
+//     return `${soat}:${daqiqa}`;
+//   }
+
+//   qoldiq() {
+//     const vaqt = this.#hozirVaqt();
+//     console.log(`[LOG ${vaqt}] qoldiq() metodi ishga tushdi`);
+//     return `hozir ${vaqt}da ${this.#non}ta non, ${this.#lagmon}ta lagmon va ${this.#cola}ta cola mavjud!`;
+//   }
+
+//   sotish(mahsulot, soni) {
+//     const vaqt = this.#hozirVaqt();
+//     console.log(`[LOG ${vaqt}] sotish() metodi ishga tushdi: ${mahsulot} - ${soni}ta`);
+
+//     if (mahsulot === "non") this.#non -= soni;
+//     else if (mahsulot === "lagmon") this.#lagmon -= soni;
+//     else if (mahsulot === "cola") this.#cola -= soni;
+//     else console.log(`Diqqat: "${mahsulot}" degan mahsulot topilmadi`);
+//   }
+
+//   qabul(mahsulot, soni) {
+//     const vaqt = this.#hozirVaqt();
+//     console.log(`[LOG ${vaqt}] qabul() metodi ishga tushdi: ${mahsulot} - ${soni}ta`);
+
+//     if (mahsulot === "non") this.#non += soni;
+//     else if (mahsulot === "lagmon") this.#lagmon += soni;
+//     else if (mahsulot === "cola") this.#cola += soni;
+//     else console.log(`Diqqat: "${mahsulot}" degan mahsulot topilmadi`);
+//   }
+// }
+
+// // tekshiramiz
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.qoldiq());
+
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+
+// console.log(shop.qoldiq());
