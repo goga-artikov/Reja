@@ -139,55 +139,55 @@
 
 // TASK-C
 
-function checkContent(string1, string2) {
-  const sorted1 = string1.split("").sort().join("");
-  const sorted2 = string2.split("").sort().join("");
+// function checkContent(string1, string2) {
+//   const sorted1 = string1.split("").sort().join("");
+//   const sorted2 = string2.split("").sort().join("");
 
-  return sorted1 === sorted2;
-}
+//   return sorted1 === sorted2;
+// }
 
-console.log(checkContent("mitgroup", "umtgripo")); //true
-console.log(checkContent("mashaqqat", "mit")); //false
+// console.log(checkContent("mitgroup", "umtgripo")); //true
+// console.log(checkContent("mashaqqat", "mit")); //false
 
-// D-TASK
+// // D-TASK
 
-class Shop {
-  constructor(non, lagmon, kola) {
-    this.mahsulotlar = { non, lagmon, kola };
-  }
+// class Shop {
+//   constructor(non, lagmon, kola) {
+//     this.mahsulotlar = { non, lagmon, kola };
+//   }
 
-  vaqt() {
-    const now = new Date();
-    return `${now.getHours()};${now.getMinutes()}`;
-  }
+//   vaqt() {
+//     const now = new Date();
+//     return `${now.getHours()};${now.getMinutes()}`;
+//   }
 
-  qoldiq() {
-    const { non, lagmon, kola } = this.mahsulotlar;
-    console.log(`[${this.vaqt()}]`);
-    return `hozir ${this.vaqt()}da ${non}ta non, ${lagmon}ta lagmon va ${kola}ta cola mavjud!`;
-  }
+//   qoldiq() {
+//     const { non, lagmon, kola } = this.mahsulotlar;
+//     console.log(`[${this.vaqt()}]`);
+//     return `hozir ${this.vaqt()}da ${non}ta non, ${lagmon}ta lagmon va ${kola}ta cola mavjud!`;
+//   }
 
-  sotish(mahsulot, soni) {
-    console.log(`[${this.vaqt()}]${mahsulot} - ${soni}ta`);
-    this.mahsulotlar[mahsulot] -= soni;
-  }
+//   sotish(mahsulot, soni) {
+//     console.log(`[${this.vaqt()}]${mahsulot} - ${soni}ta`);
+//     this.mahsulotlar[mahsulot] -= soni;
+//   }
 
-  qabul(mahsulot, soni) {
-    console.log(`[${this.vaqt()}] ${mahsulot} - ${soni}ta`);
-    this.mahsulotlar[mahsulot] += soni;
-  }
-}
+//   qabul(mahsulot, soni) {
+//     console.log(`[${this.vaqt()}] ${mahsulot} - ${soni}ta`);
+//     this.mahsulotlar[mahsulot] += soni;
+//   }
+// }
 
-// tekshiramiz
+// // tekshiramiz
 
-const shop = new Shop(4, 5, 2);
-console.log(shop.qoldiq());
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.qoldiq());
 
-shop.sotish("non", 2);
-shop.sotish("lagmon", 3);
-shop.qabul("kola", 4);
+// shop.sotish("non", 2);
+// shop.sotish("lagmon", 3);
+// shop.qabul("kola", 4);
 
-console.log(shop.qoldiq());
+// console.log(shop.qoldiq());
 
 // class Shop {
 //   #non;
@@ -242,3 +242,19 @@ console.log(shop.qoldiq());
 // shop.qabul("cola", 4);
 
 // console.log(shop.qoldiq());
+
+// TASK -  E 
+
+function teskariStr(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(teskariStr("hello"));
+console.log(teskariStr("salom"));
+
+function chappasigaStr(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(chappasigaStr("python"));
+console.log(chappasigaStr("javascript"));
