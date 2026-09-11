@@ -245,16 +245,37 @@
 
 // TASK -  E 
 
-function teskariStr(str) {
-  return str.split('').reverse().join('');
+// function teskariStr(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(teskariStr("hello"));
+// console.log(teskariStr("salom"));
+
+// function chappasigaStr(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(chappasigaStr("python"));
+// console.log(chappasigaStr("javascript"));
+
+
+// G-
+
+function kattaIndexTop(arr) {
+  let max = arr[0];
+  let maxIndex = 0;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+      maxIndex = i;
+    }
+  }
+
+  return maxIndex;
 }
 
-console.log(teskariStr("hello"));
-console.log(teskariStr("salom"));
-
-function chappasigaStr(str) {
-  return str.split('').reverse().join('');
-}
-
-console.log(chappasigaStr("python"));
-console.log(chappasigaStr("javascript"));
+// Ishlatib ko'rish:
+console.log(kattaIndexTop([5, 21, 12, 21, 8])); // Return: 1
+console.log(kattaIndexTop([10, 2, 5, 10]));     // Return: 0
