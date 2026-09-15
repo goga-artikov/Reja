@@ -262,20 +262,39 @@
 
 // G-
 
-function kattaIndexTop(arr) {
-  let max = arr[0];
-  let maxIndex = 0;
+// function kattaIndexTop(arr) {
+//   let max = arr[0];
+//   let maxIndex = 0;
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-      maxIndex = i;
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//       maxIndex = i;
+//     }
+//   }
+
+//   return maxIndex;
+// }
+
+// // Ishlatib ko'rish:
+// console.log(kattaIndexTop([5, 21, 12, 21, 8])); // Return: 1
+// console.log(kattaIndexTop([10, 2, 5, 10]));     // Return: 0
+
+//  F-TASK
+
+function findDoublers(str) {
+  const charSet = new Set();
+
+  for (let char of str) {
+    if (charSet.has(char)) {
+      return true; // Bir xil harf ikkinchi marta uchradi
     }
+    charSet.add(char);
   }
 
-  return maxIndex;
+  return false; // Hech qaysi harf takrorlanmadi
 }
 
 // Ishlatib ko'rish:
-console.log(kattaIndexTop([5, 21, 12, 21, 8])); // Return: 1
-console.log(kattaIndexTop([10, 2, 5, 10]));     // Return: 0
+console.log(findDoublers("hello")); // Return: true ('l' takrorlangan)
+console.log(findDoublers("world")); // Return: false (barcha harflar har xil)
