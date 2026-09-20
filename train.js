@@ -282,19 +282,48 @@
 
 //  F-TASK
 
-function findDoublers(str) {
-  const charSet = new Set();
+// function findDoublers(str) {
+//   const charSet = new Set();
 
-  for (let char of str) {
-    if (charSet.has(char)) {
-      return true; // Bir xil harf ikkinchi marta uchradi
-    }
-    charSet.add(char);
-  }
+//   for (let char of str) {
+//     if (charSet.has(char)) {
+//       return true; // Bir xil harf ikkinchi marta uchradi
+//     }
+//     charSet.add(char);
+//   }
 
-  return false; // Hech qaysi harf takrorlanmadi
+//   return false; // Hech qaysi harf takrorlanmadi
+// }
+
+// // Ishlatib ko'rish:
+// console.log(findDoublers("hello")); // Return: true ('l' takrorlangan)
+// console.log(findDoublers("world")); // Return: false (barcha harflar har xil)
+
+// TASK - K 
+
+function countVowels(str) {
+    const matches = str.match(/[aeiou]/gi);
+    
+    return matches ? matches.length : 0;
 }
 
-// Ishlatib ko'rish:
-console.log(findDoublers("hello")); // Return: true ('l' takrorlangan)
-console.log(findDoublers("world")); // Return: false (barcha harflar har xil)
+// Tekshirib ko'rish:
+console.log(countVowels("string")); // 1
+console.log(countVowels("salom dunyo")); // 4
+console.log(countVowels("Javascript")); // 3
+
+function countVowels1(str) {
+    const vowels = "aeiouAEIOU";
+    let count = 0;
+
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(countVowels1("string")); // 1
+console.log(countVowels1("Salom Dunyo")); // 4
