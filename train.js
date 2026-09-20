@@ -301,29 +301,37 @@
 
 // TASK - K 
 
-function countVowels(str) {
-    const matches = str.match(/[aeiou]/gi);
+// function countVowels(str) {
+//     const matches = str.match(/[aeiou]/gi);
     
-    return matches ? matches.length : 0;
+//     return matches ? matches.length : 0;
+// }
+
+// // Tekshirib ko'rish:
+// console.log(countVowels("string")); // 1
+// console.log(countVowels("salom dunyo")); // 4
+// console.log(countVowels("Javascript")); // 3
+
+// function countVowels1(str) {
+//     const vowels = "aeiouAEIOU";
+//     let count = 0;
+
+//     for (let char of str) {
+//         if (vowels.includes(char)) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(countVowels1("string")); // 1
+// console.log(countVowels1("Salom Dunyo")); // 4
+
+// TASK - L
+
+function teskariSoz(str) {
+  return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
 }
-
-// Tekshirib ko'rish:
-console.log(countVowels("string")); // 1
-console.log(countVowels("salom dunyo")); // 4
-console.log(countVowels("Javascript")); // 3
-
-function countVowels1(str) {
-    const vowels = "aeiouAEIOU";
-    let count = 0;
-
-    for (let char of str) {
-        if (vowels.includes(char)) {
-            count++;
-        }
-    }
-
-    return count;
-}
-
-console.log(countVowels1("string")); // 1
-console.log(countVowels1("Salom Dunyo")); // 4
+console.log(teskariSoz("we like coding"));
+console.log(teskariSoz("bugun dars yaxshi o'tdi"));
