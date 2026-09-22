@@ -330,8 +330,18 @@
 
 // TASK - L
 
-function teskariSoz(str) {
-  return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
+// function teskariSoz(str) {
+//   return str.split(' ').map(word => word.split('').reverse().join('')).join(' ')
+// }
+// console.log(teskariSoz("we like coding"));
+// console.log(teskariSoz("bugun dars yaxshi o'tdi"));
+
+// M-TASK
+
+function getSquareNumbers(numbers) {
+  return numbers.map(function (number) {
+    return { number: number, square: number * number };
+  });
 }
-console.log(teskariSoz("we like coding"));
-console.log(teskariSoz("bugun dars yaxshi o'tdi"));
+
+console.log(getSquareNumbers([1, 2, 3]));
